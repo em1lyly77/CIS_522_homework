@@ -69,6 +69,6 @@ class GradientDescentLinearRegression(LinearRegression):
             np.ndarray: The predicted output.
 
         """
-        # raise NotImplementedError()
+
         y_hat = X @ self.w + self.b
         return y_hat
