@@ -18,7 +18,7 @@ class LinearRegression:
 
         n = X.shape[0]  # num of rows
         # d = X.shape[1] # num of cols
-        X = np.hstack((np.ones((n, 1)), X))  ## add col of 1's at the beginning of X
+        X = np.hstack((np.ones((n, 1)), X))  # add col of 1's at the beginning of X
         y = y.reshape(-1, 1)
         if np.linalg.det(X.T @ X) != 0:
             betas = np.linalg.inv(X.T @ X) @ X.T @ y
@@ -47,7 +47,7 @@ class GradientDescentLinearRegression(LinearRegression):
         n = X.shape[0]  # num of rows
         d = X.shape[1]  # num of cols
 
-        X = np.hstack((np.ones((n, 1)), X))  ## add col of 1's at the beginning of X
+        X = np.hstack((np.ones((n, 1)), X))  # add col of 1's at the beginning of X
         betas = np.zeros(d + 1)
 
         for i in np.arange(epochs):
