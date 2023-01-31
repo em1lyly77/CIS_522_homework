@@ -2,8 +2,8 @@ import numpy as np
 
 
 class LinearRegression:
-    """ 
-    Linear Regression 
+    """
+    Linear Regression
     w: np.ndarray
     b: float
     """
@@ -14,7 +14,7 @@ class LinearRegression:
         self.b = None
 
     def fit(self, X: np.ndarray, y: np.ndarray) -> None:
-        """ Fits a linear regression model to the input data X and y by computing and storing the weights."""
+        """Fits a linear regression model to the input data X and y by computing and storing the weights."""
 
         n = X.shape[0]  # num of rows
         # d = X.shape[1] # num of cols
@@ -28,7 +28,7 @@ class LinearRegression:
             print("No analytical solution due to singular matrix.")
 
     def predict(self, X: np.ndarray) -> np.ndarray:
-        """ Uses weights of the fitted linear regression model to predict y based on the given X. """
+        """Uses weights of the fitted linear regression model to predict y based on the given X."""
 
         y_hat = X @ self.w + self.b
         return y_hat
@@ -42,7 +42,7 @@ class GradientDescentLinearRegression(LinearRegression):
     def fit(
         self, X: np.ndarray, y: np.ndarray, lr: float = 0.01, epochs: int = 1000
     ) -> None:
-        """ Fits the linear regression model to the given data using gradient descent. """
+        """Fits the linear regression model to the given data using gradient descent."""
         # raise NotImplementedError()
         n = X.shape[0]  # num of rows
         d = X.shape[1]  # num of cols
