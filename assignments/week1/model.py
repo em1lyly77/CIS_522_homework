@@ -43,7 +43,7 @@ class GradientDescentLinearRegression(LinearRegression):
         self, X: np.ndarray, y: np.ndarray, lr: float = 0.01, epochs: int = 1000
     ) -> None:
         """Fits the linear regression model to the given data using gradient descent."""
-        # raise NotImplementedError()
+
         n = X.shape[0]  # num of rows
         d = X.shape[1]  # num of cols
 
