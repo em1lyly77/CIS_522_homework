@@ -3,14 +3,13 @@ import torch
 
 
 class MLP(torch.nn.Module):
-    '''
+    """
     inherits from torch.nn.Module
 
     methods:
         __init__(): constructor that initializes the architecture
         forward(): makes a forward pass with the input data
-    '''
-
+    """
 
     def __init__(
         self,
@@ -33,11 +32,11 @@ class MLP(torch.nn.Module):
         """
         super().__init__()
         self.actv = activation()
-        self.weight = initializer(torch.empty(input_size, hidden_size, num_classes)) 
+        self.weight = initializer(torch.empty(input_size, hidden_size, num_classes))
 
         # Initialize layers of MLP
         self.layers = torch.nn.ModuleList()
-        
+
         # create layers one by one
         for i in range(hidden_count):
             self.layers += [torch.nn.Linear(input_size, hidden_size, bias=True)]
@@ -47,7 +46,6 @@ class MLP(torch.nn.Module):
         # create output layer
         self.out = torch.nn.Linear(hidden_size, num_classes, bias=True)
         initializer(self.out.weight)
-
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
@@ -64,4 +62,4 @@ class MLP(torch.nn.Module):
 
         x = self.out(x)
 
-        return x 
+        return x
