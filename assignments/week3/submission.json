@@ -2,13 +2,13 @@
     "assignment_name": "MLP",
     "contributors": [
         {
-            "name": "Jordan Matelsky",
-            "pennkey": "matelsky"
+            "name": "Qi Li",
+            "pennkey": "eqli77"
         }
     ],
     "sources": [
-        "https://example.com",
-        "Conversations with TA (include TA's name)",
-        "LLM (include information about the LLM and how it was used)"
+        "CIS_522_W3D1_Tutorial",
+        "https://peps.python.org/pep-0677/",
+        "https://pytorch.org/tutorials/beginner/nn_tutorial.html#refactor-using-nn-module"
     ]
 }
