@@ -2,11 +2,13 @@
     "assignment_name": "RegOpt",
     "contributors": [
         {
-            "name": "Change this to your name",
-            "pennkey": "MyPennKey"
+            "name": "Qi Li",
+            "pennkey": "eqli77"
         }
     ],
     "sources": [
-        "Don't forget to list your sources/attribution here!"
+        "https://pytorch.org/docs/stable/_modules/torch/optim/lr_scheduler.html",
+        "https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingLR.html",
+        "https://neptune.ai/blog/how-to-choose-a-learning-rate-scheduler"
     ]
 }
