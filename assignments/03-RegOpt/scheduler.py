@@ -40,11 +40,12 @@ class CustomLRScheduler(_LRScheduler):
         # self.base_lrs all are 0.001 (initial lr)
         # exponential decay
         # return [base_lr * math.exp(self.gamma) for base_lr in self.base_lrs]
-        if self.last_epoch < 500:
-            return [
-                base_lr * math.exp(-self.gamma * self.last_epoch)
-                for base_lr in self.base_lrs
-            ]
+        if self.last_epoch < 2500:
+            return [i for i in self.base_lrs]
+            # return [
+            #     base_lr * math.exp(-self.gamma * self.last_epoch)
+            #     for base_lr in self.base_lrs
+            # ]
 
         else:
             return [

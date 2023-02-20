@@ -9,6 +9,7 @@
     "sources": [
         "https://pytorch.org/docs/stable/_modules/torch/optim/lr_scheduler.html",
         "https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingLR.html",
-        "https://neptune.ai/blog/how-to-choose-a-learning-rate-scheduler"
+        "https://neptune.ai/blog/how-to-choose-a-learning-rate-scheduler",
+        "Hainiu's suggestion"
     ]
 }
