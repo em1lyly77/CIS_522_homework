@@ -58,4 +58,3 @@ class CustomLRScheduler(_LRScheduler):
             ]
 
         # cosine annealing
-        
