@@ -58,4 +58,4 @@ class CustomLRScheduler(_LRScheduler):
             ]
 
         # cosine annealing
-        # return [(1 + math.cos())]
+        
