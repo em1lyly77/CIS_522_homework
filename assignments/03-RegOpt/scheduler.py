@@ -19,7 +19,7 @@ class CustomLRScheduler(_LRScheduler):
 
         """
         # ... Your Code Here ...
-        # self.num_epochs = num_epochs
+
         self.T_max = T_max
         self.eta_min = eta_min
         self.gamma = gamma
