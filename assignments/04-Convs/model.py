@@ -17,12 +17,12 @@ class Model(nn.Module):
         self.conv1 = nn.Conv2d(num_channels, 16, 5)
         nn.init.xavier_uniform(self.conv1.weight)
 
-        self.conv2 = nn.Conv2d(16, 16, 3) # 3 or 5
+        self.conv2 = nn.Conv2d(16, 16, 3)  # 3 or 5
         nn.init.xavier_uniform(self.conv2.weight)
 
         self.maxpool = nn.MaxPool2d(2, 2)
 
-        self.fc = nn.Linear(16 * 6 * 6, num_classes, True) # 3 then 6, 5 then 6
+        self.fc = nn.Linear(16 * 6 * 6, num_classes, True)  # 3 then 6, 5 then 6
         nn.init.xavier_uniform(self.fc.weight)
 
         # self.network = nn.Sequential(
