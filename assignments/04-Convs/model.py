@@ -15,7 +15,7 @@ class Model(nn.Module):
         # self.size_after_conv = (self.num_channels + 2*1 - 3)/1 +1
         # self.conv1 = nn.Conv2d(num_channels, 6, 5)
         self.conv1 = nn.Conv2d(num_channels, 32, 5, stride=2, padding=2)
-        nn.init.xavier_uniform(self.conv1.weight)
+        # nn.init.xavier_uniform(self.conv1.weight)
 
         # self.conv2 = nn.Conv2d(16, 16, 3)  # 3 or 5
         # nn.init.xavier_uniform(self.conv2.weight)
@@ -23,7 +23,7 @@ class Model(nn.Module):
         self.maxpool = nn.MaxPool2d(2, 2)
 
         self.fc = nn.Linear(32 * 8 * 8, num_classes, True)  # 3 then 6, 5 then 6
-        nn.init.xavier_uniform(self.fc.weight)
+        # nn.init.xavier_uniform(self.fc.weight)
 
         # self.network = nn.Sequential(
         #     nn.Conv2d(num_channels, 6, 5),
