@@ -14,7 +14,7 @@ class Model(nn.Module):
         self.num_classes = num_classes
         # self.size_after_conv = (self.num_channels + 2*1 - 3)/1 +1
         # self.conv1 = nn.Conv2d(num_channels, 6, 5)
-        self.conv1 = nn.Conv2d(num_channels, 16, 5, stride=2, padding=1)
+        self.conv1 = nn.Conv2d(num_channels, 16, 3, stride=2, padding=2)
 
         # self.conv2 = nn.Conv2d(16, 16, 3)  # 3 or 5
 
