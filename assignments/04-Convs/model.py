@@ -22,8 +22,8 @@ class Model(nn.Module):
 
         self.batchnorm = nn.BatchNorm2d(16)
 
-        self.fc1 = nn.Linear(16 * 5 * 5, 32, True)  # 3 then 6, 5 then 6
-        self.fc2 = nn.Linear(32, num_classes, True)  # 3 then 6, 5 then 6
+        self.fc1 = nn.Linear(16 * 5 * 5, 256, True)  # 3 then 6, 5 then 6
+        self.fc2 = nn.Linear(256, num_classes, True)  # 3 then 6, 5 then 6
 
         # self.network = nn.Sequential(
         #     nn.Conv2d(num_channels, 6, 5),
