@@ -9,6 +9,7 @@
     "sources": [
         "03-RegOpt assignment",
         "https://pytorch.org/docs/stable/nn.init.html",
-        "https://stackoverflow.com/questions/53580088/calculate-the-output-size-in-convolution-layer"
+        "https://stackoverflow.com/questions/53580088/calculate-the-output-size-in-convolution-layer",
+        "W4D1 Tutorial"
     ]
 }
