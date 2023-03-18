@@ -14,7 +14,7 @@ class Model(nn.Module):
         self.num_classes = num_classes
         # self.size_after_conv = (self.num_channels + 2*1 - 3)/1 +1
         # self.conv1 = nn.Conv2d(num_channels, 6, 5)
-        self.conv1 = nn.Conv2d(num_channels, 16, 3, stride=2, padding=2)
+        self.conv1 = nn.Conv2d(num_channels, 16, 7, stride=2, padding=1)
 
         # self.conv2 = nn.Conv2d(16, 16, 3)  # 3 or 5
 
@@ -22,7 +22,7 @@ class Model(nn.Module):
 
         self.batchnorm = nn.BatchNorm2d(16)
 
-        self.fc1 = nn.Linear(16 * 5 * 5, 256, True)  # 3 then 6, 5 then 6
+        self.fc1 = nn.Linear(16 * 4 * 4, 256, True)  # 3 then 6, 5 then 6
         self.fc2 = nn.Linear(256, num_classes, True)  # 3 then 6, 5 then 6
 
         # self.network = nn.Sequential(
@@ -49,7 +49,7 @@ class Model(nn.Module):
         # x = F.relu(x)
         # x = self.maxpool(x)
 
-        x = x.view(-1, 16 * 5 * 5)
+        x = x.view(-1, 16 * 4 * 4)
         x = self.fc1(x)
         x = self.fc2(x)
         # y = self.network(x)
