@@ -22,7 +22,8 @@ class Model(nn.Module):
 
         self.batchnorm = nn.BatchNorm2d(16)
 
-        self.fc = nn.Linear(16 * 5 * 5, num_classes, True)  # 3 then 6, 5 then 6
+        self.fc1 = nn.Linear(16 * 5 * 5, 32, True)  # 3 then 6, 5 then 6
+        self.fc2 = nn.Linear(32, num_classes, True)  # 3 then 6, 5 then 6
 
         # self.network = nn.Sequential(
         #     nn.Conv2d(num_channels, 6, 5),
@@ -49,6 +50,7 @@ class Model(nn.Module):
         # x = self.maxpool(x)
 
         x = x.view(-1, 16 * 5 * 5)
-        x = self.fc(x)
+        x = self.fc1(x)
+        x = self.fc2(x)
         # y = self.network(x)
         return x
