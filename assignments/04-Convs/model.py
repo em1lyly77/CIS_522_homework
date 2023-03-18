@@ -20,7 +20,7 @@ class Model(nn.Module):
 
         self.maxpool = nn.MaxPool2d(3, 3)
 
-        self.fc = nn.Linear(16 * 4 * 4, num_classes, True)  # 3 then 6, 5 then 6
+        self.fc = nn.Linear(16 * 5 * 5, num_classes, True)  # 3 then 6, 5 then 6
 
         # self.network = nn.Sequential(
         #     nn.Conv2d(num_channels, 6, 5),
@@ -45,7 +45,7 @@ class Model(nn.Module):
         # x = F.relu(x)
         # x = self.maxpool(x)
 
-        x = x.view(-1, 16 * 4 * 4)
+        x = x.view(-1, 16 * 5 * 5)
         x = self.fc(x)
         # y = self.network(x)
         return x

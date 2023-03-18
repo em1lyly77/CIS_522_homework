@@ -13,4 +13,4 @@ class CONFIG:
         [nn.Module], torch.optim.Optimizer
     ] = lambda model: torch.optim.Adam(model.parameters(), lr=2e-3)
 
-    transforms = Compose([ToTensor(), Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+    transforms = Compose([ToTensor(), Normalize(mean=[0.485, 0.456, 0.4], std=[0.229, 0.224, 0.2])])
