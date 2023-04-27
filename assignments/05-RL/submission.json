@@ -2,11 +2,14 @@
     "assignment_name": "RL",
     "contributors": [
         {
-            "name": "Change this to your name",
-            "pennkey": "MyPennKey"
+            "name": "Qi Li",
+            "pennkey": "eqli77"
         }
     ],
     "sources": [
-        "Don't forget to list your sources/attribution here!"
+        "ChapGPT",
+        "W12D2 Tutorial",
+        "W12D2 reference notebook",
+        "https://gymnasium.farama.org/environments/box2d/lunar_lander/"
     ]
 }
