@@ -270,7 +270,6 @@ class Agent:
         next_q_values = self.target_net(next_state_batch).max(dim=1)[0].view(-1, 1)
 
         q_target = reward_batch + self.gamma * next_q_values * (1 - done_batch)
-        # print(q_target.shape)
 
         loss = F.mse_loss(q_pred, q_target).mean()
         self.optimizer.zero_grad()
